@@ -9,12 +9,12 @@
 ##get the value of the inverse
 makeCacheMatrix <- function(x = matrix()) {
     ##Init inverse
-    inverse<-NULL
+    i<-NULL
     ##set matrix
     set <- function(y)
     {
         x<<-y
-        inverse<<-NULL
+        i<<-NULL
     }
     ## get matrix
     get<- function()
@@ -22,14 +22,14 @@ makeCacheMatrix <- function(x = matrix()) {
         x
     }
     ##set inverse
-    setinverse<-function(i)
+    setinverse<-function(inverse)
     {
-        inverse<-i
+        i<<-inverse
     }
     ##get inverse
     getinverse<-function()
     {
-        inverse
+        i
     }
     ##return list of methods
     list(set=set,get=get,setinverse=setinverse,getinverse=getinverse)
